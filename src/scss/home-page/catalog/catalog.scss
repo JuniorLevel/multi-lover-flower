@@ -14,21 +14,32 @@
     filter: blur(125px);
     transform: rotate(32.83deg);
     background-size: cover;
-    z-index: -1;
+    z-index: 0;
   }
   &:after {
     content: "";
     top: 540px;
     right: 40px;
-    width: 700px;
+    width: 900px;
     height: 236px;
     position: absolute;
-    background: #43ffd2;
+    background-color: #43ffd2;
     filter: blur(125px);
     transform: rotate(32.83deg);
     z-index: -1;
   }
   &__title {
+    &:after {
+      position: absolute;
+      content: "";
+      top: 200px;
+      right: 0;
+      width: 1000px;
+      height: 300px;
+      background-image: url("../../../images/HomePage/catalog/buket.svg");
+      background-size: cover;
+      z-index: -1;
+    }
     margin-bottom: 40px;
   }
 }
@@ -42,13 +53,52 @@
 }
 
 .content-block {
-  //start
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 30px;
-  &__info {
-    padding-left: 95px;
+  &:before {
+    position: absolute;
+    content: "";
+    top: 450px;
+    left: 0;
+    width: 900px;
+    height: 260px;
+    background-image: url("../../../images/HomePage/catalog/flowers.svg");
+    background-size: cover;
+    z-index: -1;
   }
+  &:after {
+    position: absolute;
+    content: "";
+    bottom: 170px;
+    right: 15px;
+    width: 1000px;
+    height: 220px;
+    background-image: url("../../../images/HomePage/catalog/ads.svg");
+    background-size: cover;
+    z-index: -1;
+  }
+  display: grid;
+  &__info {
+    grid-area: info;
+    align-self: center;
+  }
+  .item1 {
+    grid-area: item1;
+    justify-self: right;
+    align-self: center;
+  }
+  .item2 {
+    grid-area: item2;
+    align-self: start;
+  }
+  .item3 {
+    grid-area: item3;
+    align-self: end;
+  }
+  grid-template-areas:
+    "info item1"
+    "item2 item3";
+  grid-template-columns: 640px 1fr;
+  grid-template-rows: minmax(200px, auto) minmax(350px, auto);
+  grid-gap: 30px;
   &__text {
     margin-bottom: 30px;
     &:last-child {
