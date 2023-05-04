@@ -1,0 +1,169 @@
+@import "src/scss/variables.scss";
+@import "swiper/swiper-bundle.css";
+
+.popular {
+  position: relative;
+  padding-bottom: 190px;
+  &:before {
+    content: "";
+    position: absolute;
+    background-color: rgba(67, 255, 210, 0.47);
+    filter: blur(125px);
+    transform: rotate(32.83deg);
+    width: 600px;
+    height: 500px;
+    top: 700px;
+    left: 0;
+    z-index: -1;
+    opacity: 0.7;
+  }
+  &:after {
+    position: absolute;
+    content: "";
+    background-image: url("../../../images/HomePage/popular/popular-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    right: 0;
+    width: 62%;
+    height: 830px;
+    z-index: -1;
+  }
+  &__title {
+    &:before {
+      content: "";
+      position: absolute;
+      background-color: #7d2253;
+      filter: blur(125px);
+      transform: rotate(32.83deg);
+      width: 600px;
+      height: 500px;
+      top: 700px;
+      left: 600px;
+      z-index: -1;
+      opacity: 0.7;
+    }
+    margin-bottom: 50px;
+  }
+  &__text {
+    color: $white-color;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 86px;
+  }
+  &__link {
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      top: 6px;
+      right: -50px;
+      background-image: url("../../../images/HomePage/popular/arrow.svg");
+      background-repeat: no-repeat;
+      width: 40px;
+      height: 6px;
+      font-weight: 700;
+    }
+    color: $pink-color;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 12px;
+    &:hover {
+      transition: $transition;
+      text-decoration-line: underline;
+    }
+  }
+}
+
+.swiper {
+  &-wrapper {
+  }
+  &-slide {
+    max-width: 350px;
+    &__img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    &__picture {
+      object-fit: cover;
+      width: 350px;
+      height: 450px;
+    }
+    &__title {
+      font-size: 20px;
+      color: $white-color;
+      margin-bottom: 10px;
+    }
+    &__price {
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    &__btn {
+      margin-bottom: 60px;
+    }
+    &__old-price {
+      margin-left: 10px;
+      text-decoration: line-through;
+      color: #939393;
+      letter-spacing: 0.04em;
+    }
+  }
+}
+
+.cart-addBtn {
+  width: 220px;
+  height: 50px;
+  padding: 5px 16px;
+  border: 0.5px solid #ffffff;
+  color: $white-color;
+  &:hover {
+    transition: $transition;
+    background-color: $btn-hover-color;
+  }
+}
+.swiper-button-prev {
+  top: 230px;
+  color: $btn-normal-color;
+}
+
+.swiper-button-next {
+  top: 230px;
+  color: $btn-normal-color;
+}
+
+.new-label {
+  position: relative;
+  &:after {
+    position: absolute;
+    content: "new";
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: $pink-color;
+    text-transform: uppercase;
+    padding: 15px 12px;
+    color: #000000;
+  }
+}
+
+.sale-label {
+  position: relative;
+  &:after {
+    position: absolute;
+    content: "sale";
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #31985a;
+    text-transform: uppercase;
+    padding: 15px 12px;
+    color: #000000;
+  }
+}
+
+//TODO: 2 наклейки: new и sale
