@@ -66,7 +66,7 @@
       &--search {
         background-image: url("../../../images/icons/search.svg");
         background-repeat: no-repeat;
-        background-position: 0px 2px;
+        background-position: 0 2px;
         padding-left: 27px;
       }
     }
@@ -239,9 +239,27 @@
     backdrop-filter: $BlurBackdrop-filter;
     border-radius: $radius;
   }
+  &__sign {
+    position: absolute;
+    top: 90px;
+    right: 300px;
+    z-index: 0;
+  }
 }
 
 .sign {
-  position: absolute;
-  top: 250px;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    background-image: url("../../../images/HomePage/sign.svg");
+    background-size: cover;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 254px;
+    height: 189px;
+    z-index: -1;
+  }
 }

@@ -1,0 +1,70 @@
+@import "../../variables.scss";
+
+.order {
+  position: relative;
+  padding-bottom: 140px;
+  &:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../../../images/HomePage/order/order-bg.png");
+    background-repeat: no-repeat;
+    width: 562px;
+    height: 845px;
+    z-index: -1;
+  }
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__sign {
+    position: absolute;
+    top: 730px;
+    bottom: 0;
+    right: 0;
+    left: 1150px;
+  }
+}
+
+.order-list {
+  counter-reset: test;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  padding: 40px 108px 0 180px;
+  &:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 180px;
+    width: 65px;
+    height: 10px;
+    background-color: $pink-color;
+  }
+  &__item {
+    width: 247px;
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &-title {
+      &:before {
+        counter-increment: test;
+        content: counter(test) " ";
+      }
+      font-weight: 700;
+      font-size: 30px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: $pink-color;
+      margin-bottom: 12px;
+    }
+    &-text {
+      text-transform: uppercase;
+      color: $white-color;
+      font-size: 16px;
+    }
+  }
+}
