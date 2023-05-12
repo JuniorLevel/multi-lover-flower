@@ -1,0 +1,106 @@
+@import "../../variables.scss";
+
+.instagram {
+}
+
+.instagram-content {
+  display: flex;
+  gap: 30px;
+}
+
+.instagram {
+  min-height: 450px;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 70px;
+    left: 300px;
+    background-image: url("/src/images/HomePage/instagram/instagram.svg");
+    background-repeat: no-repeat;
+    width: 990px;
+    height: 168px;
+    z-index: -1;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 400px;
+    left: 550px;
+    background: #43ffd2;
+    filter: blur(125px);
+    transform: rotate(21.1deg);
+    width: 700px;
+    height: 210px;
+    z-index: -1;
+  }
+  &-content {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50px;
+      left: -350px;
+      background: #43ffd2;
+      filter: blur(125px);
+      transform: rotate(21.1deg);
+      width: 100px;
+      height: 211px;
+      z-index: -1;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 200px;
+      right: -400px;
+      background: #7d2253;
+      filter: blur(125px);
+      transform: rotate(32.83deg);
+      width: 450px;
+      height: 354px;
+      z-index: -1;
+    }
+    display: flex;
+    justify-content: space-between;
+    min-height: 160px;
+    &__item {
+    }
+    &__item-img {
+    }
+    &__block {
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        top: -80px;
+        left: 0;
+        width: 250px;
+        height: 163px;
+        background-image: url("/src/images/HomePage/instagram/instagram-sign.svg");
+        background-repeat: no-repeat;
+        z-index: -1;
+      }
+      border-top: 1px solid $btn-normal-color;
+      max-width: 350px;
+      width: 100%;
+    }
+    &__links {
+    }
+  }
+}
+.links {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 100%;
+  &-list {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    margin: 0;
+    &__item {
+    }
+    &__link {
+    }
+  }
+}

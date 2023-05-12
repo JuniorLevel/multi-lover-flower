@@ -1,0 +1,163 @@
+@import "src/scss/variables.scss";
+
+.questions {
+  position: relative;
+  background-color: #0f2222;
+  padding: 25px 0;
+  margin-bottom: 160px;
+  z-index: 1;
+  &:before {
+    position: absolute;
+    content: "";
+    top: -160px;
+    left: 0;
+    background-image: url("/src/images/HomePage/questions/questions-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 700px;
+    height: 1000px;
+    z-index: -1;
+  }
+  &__inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    &:before {
+      position: absolute;
+      content: "";
+      top: 225px;
+      left: -350px;
+      width: 350px;
+      height: 250px;
+      background-color: #7d2253;
+      filter: blur(125px);
+      transform: rotate(32.83deg);
+      z-index: -2;
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      top: 225px;
+      left: 0;
+      opacity: 0.5;
+      width: 350px;
+      height: 250px;
+      background-color: #43ffd2;
+      filter: blur(125px);
+      transform: rotate(32.83deg);
+      z-index: -2;
+    }
+  }
+  &__inner-title {
+  }
+  &__inner-span {
+    padding-left: 95px;
+  }
+  &__inner-text {
+    flex: 0 0 255px;
+    font-size: 16px;
+    padding-top: 50px;
+    position: relative;
+    &:before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      border: 1px solid #43ffd2;
+    }
+  }
+  &__form {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.form-questions {
+  max-width: 445px;
+  font-size: 14px;
+  &__name {
+    color: $white-color;
+    border: 1px solid $btn-normal-color;
+    background-color: transparent;
+    padding: 0 15px;
+    &::placeholder {
+      text-transform: uppercase;
+      color: #395959;
+    }
+    &:focus {
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+    width: 445px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  &__phone {
+    color: $white-color;
+    border: 1px solid $btn-normal-color;
+    background-color: transparent;
+    padding: 0 15px;
+    &::placeholder {
+      text-transform: uppercase;
+      color: #395959;
+    }
+    &:focus {
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+    width: 445px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  &__comment {
+    color: $white-color;
+    padding: 19px 20px;
+    border: 1px solid $btn-normal-color;
+    background-color: transparent;
+    min-height: 120px;
+    &::placeholder {
+      text-transform: uppercase;
+      color: #395959;
+    }
+    &:focus {
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+    resize: none;
+    width: 445px;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+  &__btn {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    width: 255px;
+  }
+  &__policy {
+  }
+  &__policy-link {
+    color: $pink-color;
+    &:hover {
+      transition: $transition;
+      text-decoration: underline;
+    }
+  }
+  position: relative;
+  &:before {
+    position: absolute;
+    top: 0;
+    left: -500px;
+    content: "";
+    width: 300px;
+    height: 294px;
+    background-image: url("/src/images/HomePage/questions/have any questions_.svg");
+    background-repeat: no-repeat;
+  }
+}
