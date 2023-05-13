@@ -4,18 +4,18 @@
   position: relative;
   background-color: #0f2222;
   padding: 25px 0;
-  margin-bottom: 160px;
+  margin-bottom: 300px;
   z-index: 1;
   &:before {
     position: absolute;
     content: "";
-    top: -160px;
+    top: -200px;
     left: 0;
     background-image: url("/src/images/HomePage/questions/questions-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 700px;
-    height: 1000px;
+    width: 900px;
+    height: 1090px;
     z-index: -1;
   }
   &__inner {
@@ -29,7 +29,7 @@
       content: "";
       top: 225px;
       left: -350px;
-      width: 350px;
+      width: 550px;
       height: 250px;
       background-color: #7d2253;
       filter: blur(125px);
