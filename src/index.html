@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -83,7 +83,14 @@
             </ul>
           </div>
           <div class="header-banner">
+            <div hidden class="hamburger">
+              <img src="/src/images/icons/hamburger.svg" alt="hamburger-svg" />
+            </div>
+            <div hidden class="hamburger-menu"></div>
             <h1 class="header-banner__title">Lover Flower</h1>
+            <button hidden class="header-banner__cart-btn cart-btn">
+              <span data-cart-count="0" class="cart-btn__count">5</span>
+            </button>
             <p class="header-banner__text">
               Создаём для тех, кто ценит свежесть и изящество цветка
             </p>
@@ -150,9 +157,9 @@
               <button class="panel__cart cart-btn">
                 <span data-cart-count="0" class="cart-btn__count">5</span>
               </button>
-              <div class="panel__sign sign"></div>
             </div>
           </div>
+          <div class="header__sign sign"></div>
         </div>
       </header>
       <main class="main">
