@@ -1,4 +1,5 @@
 @import "src/scss/variables.scss";
+@import "src/scss/common.scss";
 
 .questions {
   position: relative;
@@ -93,7 +94,7 @@
         opacity: 0;
       }
     }
-    width: 445px;
+    width: 100%;
     height: 60px;
     margin-bottom: 10px;
   }
@@ -111,7 +112,7 @@
         opacity: 0;
       }
     }
-    width: 445px;
+    width: 100%;
     height: 60px;
     margin-bottom: 10px;
   }
@@ -131,7 +132,7 @@
       }
     }
     resize: none;
-    width: 445px;
+    width: 100%;
     height: 60px;
     margin-bottom: 20px;
   }
@@ -159,5 +160,75 @@
     height: 294px;
     background-image: url("/src/images/HomePage/questions/have any questions_.svg");
     background-repeat: no-repeat;
+  }
+}
+
+@media screen and (max-width: 1605px) {
+  .form-questions {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1015px) {
+  .questions {
+    &::before {
+      display: none;
+    }
+    &__inner {
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+    &__inner-span {
+      padding-left: 0;
+    }
+    &__form {
+      display: block;
+    }
+    margin-bottom: 100px;
+  }
+  .form-questions {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 685px) {
+  .questions {
+    &__inner {
+      display: block;
+    }
+    &__inner-title {
+      margin-bottom: 20px;
+    }
+    &__inner-text {
+      padding: 0;
+      &::before {
+        border: none;
+      }
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .questions {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      top: -100px;
+      right: -10px;
+      width: 252px;
+      height: 378px;
+      background-image: url("/src//images/HomePage/questions/questions-bg-mobile.png");
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+    &__inner-title {
+      margin-bottom: 140px;
+    }
   }
 }
