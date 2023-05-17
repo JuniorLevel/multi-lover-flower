@@ -1,1 +1,9 @@
 @import "src/scss/variables";
+
+$maxWidth: 1130;
+
+@mixin adaptive-font($maxFz, $minFz) {
+  $size: $maxFz - $minFz;
+  $maxWidth: $maxWidth - 320;
+  font-size: calc(#{$minFz + px} + #{$size} * ((100vw - 320px) / #{$maxWidth}));
+}

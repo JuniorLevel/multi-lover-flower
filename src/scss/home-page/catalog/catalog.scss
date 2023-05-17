@@ -1,4 +1,5 @@
 @import "../../variables.scss";
+@import "../../common.scss";
 
 .catalog {
   position: relative;
@@ -143,5 +144,62 @@
       transition: $transition;
       text-decoration-line: underline;
     }
+  }
+}
+
+@media screen and (max-width: 1015px) {
+  .catalog {
+    padding-bottom: 100px;
+    &::before {
+      top: 930px;
+      left: -215px;
+      height: 300px;
+    }
+    &::after {
+      top: 320px;
+    }
+    &__title {
+      &::after {
+        background-image: none;
+      }
+    }
+  }
+  .content-block {
+    &:before,
+    &::after {
+      background-image: none;
+    }
+    display: flex;
+    flex-direction: column;
+    &__info {
+      display: none;
+    }
+    &__item {
+      list-style: none;
+      text-align: center;
+    }
+    &__list-item {
+      list-style-type: disc;
+      &::marker {
+        color: $white-color;
+        font-size: 15px;
+      }
+      list-style-position: inside;
+    }
+    &__item-title {
+      @include adaptive-font(35, 20);
+    }
+  }
+  .item1 {
+    align-self: normal !important;
+  }
+  .item2 {
+    align-self: normal !important;
+  }
+  .item3 {
+    align-self: normal !important;
+  }
+  .title {
+    @include adaptive-font(100, 40);
   }
 }
