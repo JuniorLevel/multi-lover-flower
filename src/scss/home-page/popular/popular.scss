@@ -76,14 +76,13 @@
 }
 
 .swiper {
-  &-wrapper {
-  }
   &-slide {
+    margin: 0 auto;
     max-width: 350px;
     &__img {
       object-fit: cover;
       width: 100%;
-      height: 100%;
+      max-height: 100%;
     }
     &__picture {
       object-fit: cover;
@@ -166,4 +165,18 @@
   }
 }
 
-//TODO: 2 наклейки: new и sale
+@media screen and (max-width: 1075px) {
+  .popular {
+    padding-bottom: 100px;
+    &::after {
+      background-image: none;
+    }
+  }
+  .swiper-button-prev {
+    display: none;
+  }
+
+  .swiper-button-next {
+    display: none;
+  }
+}
