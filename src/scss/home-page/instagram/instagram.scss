@@ -97,9 +97,38 @@
     display: flex;
     gap: 30px;
     margin: 0;
-    &__item {
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .instagram {
+    &::before {
+      display: none;
     }
-    &__link {
+  }
+  .instagram-content {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &__block {
+      max-width: 100%;
+      order: -1;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .instagram-content {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .links-list {
+    margin-top: 15px;
+    svg {
+      width: 25px;
+      height: 25px;
     }
   }
 }
