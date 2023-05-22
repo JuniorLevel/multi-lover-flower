@@ -1,0 +1,125 @@
+@import "../../variables.scss";
+
+.breadcrumbs-list {
+  &__item {
+    display: inline;
+    padding-right: 15px;
+    text-transform: uppercase;
+    font-size: 14px;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "/";
+      top: 0;
+      right: 5px;
+    }
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    color: $white-color;
+    &:hover {
+      transition: $transition;
+      color: $btn-hover-color;
+    }
+  }
+}
+.breadcrumb-active {
+  color: gray;
+}
+
+.header {
+  &--catalogBgImages {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 1073px;
+      height: 717px;
+      background-image: url("../../../images/CatalogPage/catalog-header/catalog-header-left-bg.png");
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      top: 50px;
+      right: -520px;
+      width: 1073px;
+      height: 842px;
+      background-image: url("../../../images/CatalogPage/catalog-header/catalog-header-right-bg.png");
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
+}
+
+.catalog-banner {
+  max-width: 900px;
+  min-height: 530px;
+  padding: 10px 20px 20px 20px;
+  border-radius: $border-radius-blocks;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  &__title {
+    font-size: 100px;
+    text-align: start;
+    line-height: 120px;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+  }
+  &__title-span {
+    padding-left: 300px;
+  }
+  &__text {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  &__tags {
+  }
+}
+
+.catalog-tags {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  &__list-item {
+    padding: 11px 16px;
+    color: $white-color;
+    text-transform: uppercase;
+    border: 0.5px solid $white-color;
+    border-radius: $border-radius-blocks;
+    font-size: 12px;
+    &:hover {
+      transition: $transition;
+      color: black;
+      background-color: $btn-normal-color;
+      cursor: pointer;
+    }
+  }
+}
+
+.social-links {
+  &--catalog {
+    position: absolute;
+    top: 150px;
+    right: 0;
+  }
+}
+
+.panel {
+  &--catalog {
+    position: absolute;
+    top: 600px;
+    right: 0;
+  }
+}

@@ -25,11 +25,16 @@ module.exports = {
     assetModuleFilename: "assets/[hash][ext]",
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "src", "index.html"),
-    }),
     new MiniCssExtractPlugin({
       filename: "[name].[contenthash].css",
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "src", "index.html"),
+      filename: "index.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "src", "catalog.html"),
+      filename: "catalog.html",
     }),
     // new CopyPlugin({
     //   patterns: [{ from: 'static', to: './' }],
