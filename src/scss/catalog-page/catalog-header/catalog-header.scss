@@ -65,8 +65,8 @@
   min-height: 530px;
   padding: 10px 20px 20px 20px;
   border-radius: $border-radius-blocks;
-  background-color: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(10px);
+  background-color: $BlurBackground-color;
+  backdrop-filter: $BlurBackdrop-filter;
   &__title {
     font-size: 100px;
     text-align: start;
@@ -122,4 +122,12 @@
     top: 600px;
     right: 0;
   }
+}
+
+.filter-block {
+  background: $BlurBackground-color;
+  border-radius: $border-radius-blocks;
+  backdrop-filter: $BlurBackdrop-filter;
+  min-height: 400px;
+  max-height: 818px;
 }

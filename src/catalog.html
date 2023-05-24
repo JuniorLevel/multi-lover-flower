@@ -20,6 +20,19 @@
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
+
+    <!--Plugin CSS file with desired skin-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"
+    />
+
+    <!--jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--Plugin JavaScript file-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+
     <link rel="stylesheet" href="./index.scss" />
     <title>Каталог</title>
   </head>
@@ -195,7 +208,434 @@
           </div>
         </div>
       </header>
-      <main class="main"></main>
+      <main class="main">
+        <section class="catalog-products">
+          <div class="container">
+            <div class="catalog-products__inner">
+              <aside class="catalog-products__filter-block filter-block">
+                <h3 class="filter-block__title">По свету</h3>
+                <ul class="filter-block__list">
+                  <li class="filter-block__list-item">
+                    <input
+                      type="checkbox"
+                      class="filter-block__checkbox"
+                      id="checkbox-1"
+                    />
+                    <label for="checkbox-1">нежные</label>
+                  </li>
+                  <li class="filter-block__list-item">
+                    <input
+                      type="checkbox"
+                      class="filter-block__checkbox"
+                      id="checkbox-2"
+                    />
+                    <label for="checkbox-2">яркие</label>
+                  </li>
+                </ul>
+                <h3 class="filter-block__title">По цвету</h3>
+                <ul class="filter-block__list">
+                  <li class="filter-block__list-item">
+                    <input
+                      type="checkbox"
+                      class="filter-block__checkbox"
+                      id="checkbox-3"
+                    />
+                    <label for="checkbox-3">белый</label>
+                  </li>
+                  <li class="filter-block__list-item">
+                    <input
+                      type="checkbox"
+                      class="filter-block__checkbox"
+                      id="checkbox-4"
+                    />
+                    <label for="checkbox-4">желтый</label>
+                  </li>
+                  <li class="filter-block__list-item">
+                    <input
+                      type="checkbox"
+                      class="filter-block__checkbox"
+                      id="checkbox-5"
+                    />
+                    <label for="checkbox-5">зеленый</label>
+                  </li>
+                  <li class="filter-block__list-item">
+                    <input
+                      type="checkbox"
+                      class="filter-block__checkbox"
+                      id="checkbox-6"
+                    />
+                    <label for="checkbox-6">красный</label>
+                  </li>
+                  <li class="filter-block__list-item">
+                    <input
+                      type="checkbox"
+                      class="filter-block__checkbox"
+                      id="checkbox-7"
+                    />
+                    <label for="checkbox-7">оранжевый</label>
+                  </li>
+                  <li class="filter-block__list-item">
+                    <input
+                      type="checkbox"
+                      class="filter-block__checkbox"
+                      id="checkbox-8"
+                    />
+                    <label for="checkbox-8">розовый</label>
+                  </li>
+                  <li class="filter-block__list-item">
+                    <input
+                      type="checkbox"
+                      class="filter-block__checkbox"
+                      id="checkbox-9"
+                    />
+                    <label for="checkbox-9">синий</label>
+                  </li>
+                </ul>
+                <h3 class="filter-block__title">по формату</h3>
+                <ul class="filter-block__list">
+                  <li class="filter-block__list-item">
+                    <input
+                      type="checkbox"
+                      class="filter-block__checkbox"
+                      id="checkbox-10"
+                    />
+                    <label for="checkbox-10">букет</label>
+                  </li>
+                  <li class="filter-block__list-item">
+                    <input
+                      type="checkbox"
+                      class="filter-block__checkbox"
+                      id="checkbox-11"
+                    />
+                    <label for="checkbox-11">в вазе</label>
+                  </li>
+                  <li class="filter-block__list-item">
+                    <input
+                      type="checkbox"
+                      class="filter-block__checkbox"
+                      id="checkbox-12"
+                    />
+                    <label for="checkbox-12">в конверте</label>
+                  </li>
+                  <li class="filter-block__list-item">
+                    <input
+                      type="checkbox"
+                      class="filter-block__checkbox"
+                      id="checkbox-13"
+                    />
+                    <label for="checkbox-13">в корзине</label>
+                  </li>
+                  <li class="filter-block__list-item">
+                    <input
+                      type="checkbox"
+                      class="filter-block__checkbox"
+                      id="checkbox-14"
+                    />
+                    <label for="checkbox-14">в шляпной коробке</label>
+                  </li>
+                  <li class="filter-block__list-item">
+                    <input
+                      type="checkbox"
+                      class="filter-block__checkbox"
+                      id="checkbox-15"
+                    />
+                    <label for="checkbox-15">в ящике</label>
+                  </li>
+                </ul>
+                <h3 class="filter-block__title">стоимость</h3>
+                <input type="range" class="filter-block__range" />
+                <span class="filter-block__range-span"
+                  >Цена: 50.00 ₽ – 400.00 ₽</span
+                >
+                <h3 class="filter-block__title">по цветку</h3>
+                <div class="filter-block__list-wrapper">
+                  <ul class="filter-block__list">
+                    <li class="filter-block__list-item">
+                      <input
+                        type="checkbox"
+                        class="filter-block__checkbox"
+                        id="checkbox-16"
+                      />
+                      <label for="checkbox-16">Альстромерия (2)</label>
+                    </li>
+                    <li class="filter-block__list-item">
+                      <input
+                        type="checkbox"
+                        class="filter-block__checkbox"
+                        id="checkbox-17"
+                      />
+                      <label for="checkbox-17">Антуриум (1)</label>
+                    </li>
+                    <li class="filter-block__list-item">
+                      <input
+                        type="checkbox"
+                        class="filter-block__checkbox"
+                        id="checkbox-18"
+                      />
+                      <label for="checkbox-18">Аспарагус (1)</label>
+                    </li>
+                    <li class="filter-block__list-item">
+                      <input
+                        type="checkbox"
+                        class="filter-block__checkbox"
+                        id="checkbox-19"
+                      />
+                      <label for="checkbox-19">Астильба (7)</label>
+                    </li>
+                    <li class="filter-block__list-item">
+                      <input
+                        type="checkbox"
+                        class="filter-block__checkbox"
+                        id="checkbox-20"
+                      />
+                      <label for="checkbox-20">Астранция (1)</label>
+                    </li>
+                    <li class="filter-block__list-item">
+                      <input
+                        type="checkbox"
+                        class="filter-block__checkbox"
+                        id="checkbox-21"
+                      />
+                      <label for="checkbox-21">Астранция (1)</label>
+                    </li>
+                  </ul>
+                </div>
+                <button class="filter-block__btn btn">Очистить фильтр</button>
+              </aside>
+              <div class="catalog-products__block products-block">
+                <div class="products-block__tags block-tags">
+                  <ul class="block-tags__list">
+                    <li class="block-tags__list-item">
+                      <span class="block-tags__item-text"
+                        >букеты из сухоцветов</span
+                      >
+                      <button class="block-tags__item-btn"></button>
+                    </li>
+                  </ul>
+                  <select class="block-tags__select">
+                    <option
+                      value="popular"
+                      selected
+                      class="block-tags__select-option"
+                    >
+                      По популярности
+                    </option>
+                    <option value="profit" class="block-tags__select-option">
+                      По выгодной цене
+                    </option>
+                  </select>
+                </div>
+                <div class="products-block__cards">
+                  <article class="products-block__card product-card">
+                    <div class="product-card__wrapper">
+                      <div class="product-card__img">
+                        <a href="#" class="product-card__link"></a>
+                        <img
+                          src="../src/images/CatalogPage/catalog-products/catalog-product-1.jpg"
+                          alt="product-img-1"
+                          class="product-card__picture"
+                        />
+                      </div>
+                      <h3 class="product-card__title">Лучший день</h3>
+                      <p class="product-card__price">167.000 ₽</p>
+                      <button class="product-card__btn cart-addBtn">
+                        В корзину
+                      </button>
+                    </div>
+                  </article>
+                  <article class="products-block__card product-card new-label">
+                    <div class="product-card__wrapper">
+                      <div class="product-card__img">
+                        <a href="#" class="product-card__link"></a>
+                        <img
+                          src="../src/images/CatalogPage/catalog-products/catalog-product-2.jpg"
+                          alt="product-img-2"
+                          class="product-card__picture"
+                        />
+                      </div>
+                      <h3 class="product-card__title">Лучший день</h3>
+                      <p class="product-card__price">167.000 ₽</p>
+                      <button class="product-card__btn cart-addBtn">
+                        В корзину
+                      </button>
+                    </div>
+                  </article>
+                  <article class="products-block__card product-card">
+                    <div class="product-card__wrapper">
+                      <div class="product-card__img">
+                        <a href="#" class="product-card__link"></a>
+                        <img
+                          src="../src/images/CatalogPage/catalog-products/catalog-product-3.jpg"
+                          alt="product-img-3"
+                          class="product-card__picture"
+                        />
+                      </div>
+                      <h3 class="product-card__title">Лучший день</h3>
+                      <p class="product-card__price">167.000 ₽</p>
+                      <button class="product-card__btn cart-addBtn">
+                        В корзину
+                      </button>
+                    </div>
+                  </article>
+                  <article class="products-block__card product-card sale-label">
+                    <div class="product-card__wrapper">
+                      <div class="product-card__img">
+                        <a href="#" class="product-card__link"></a>
+                        <img
+                          src="../src/images/CatalogPage/catalog-products/catalog-product-4.jpg"
+                          alt="product-img-4"
+                          class="product-card__picture"
+                        />
+                      </div>
+                      <h3 class="product-card__title">Лучший день</h3>
+                      <p class="product-card__price">167.000 ₽</p>
+                      <button class="product-card__btn cart-addBtn">
+                        В корзину
+                      </button>
+                    </div>
+                  </article>
+                  <article class="products-block__card product-card">
+                    <div class="product-card__wrapper">
+                      <div class="product-card__img">
+                        <a href="#" class="product-card__link"></a>
+                        <img
+                          src="../src/images/CatalogPage/catalog-products/catalog-product-5.jpg"
+                          alt="product-img-5"
+                          class="product-card__picture"
+                        />
+                      </div>
+                      <h3 class="product-card__title">Лучший день</h3>
+                      <p class="product-card__price">167.000 ₽</p>
+                      <button class="product-card__btn cart-addBtn">
+                        В корзину
+                      </button>
+                    </div>
+                  </article>
+                  <article class="products-block__card product-card sale-label">
+                    <div class="product-card__wrapper">
+                      <div class="product-card__img">
+                        <a href="#" class="product-card__link"></a>
+                        <img
+                          src="../src/images/CatalogPage/catalog-products/catalog-product-6.jpg"
+                          alt="product-img-6"
+                          class="product-card__picture"
+                        />
+                      </div>
+                      <h3 class="product-card__title">Лучший день</h3>
+                      <p class="product-card__price">167.000 ₽</p>
+                      <button class="product-card__btn cart-addBtn">
+                        В корзину
+                      </button>
+                    </div>
+                  </article>
+                  <article class="products-block__card product-card">
+                    <div class="product-card__wrapper">
+                      <div class="product-card__img">
+                        <a href="#" class="product-card__link"></a>
+                        <img
+                          src="../src/images/CatalogPage/catalog-products/catalog-product-7.jpg"
+                          alt="product-img-7"
+                          class="product-card__picture"
+                        />
+                      </div>
+                      <h3 class="product-card__title">Лучший день</h3>
+                      <p class="product-card__price">167.000 ₽</p>
+                      <button class="product-card__btn cart-addBtn">
+                        В корзину
+                      </button>
+                    </div>
+                  </article>
+                  <article class="products-block__card product-card">
+                    <div class="product-card__wrapper">
+                      <div class="product-card__img">
+                        <a href="#" class="product-card__link"></a>
+                        <img
+                          src="../src/images/CatalogPage/catalog-products/catalog-product-8.jpg"
+                          alt="product-img-8"
+                          class="product-card__picture"
+                        />
+                      </div>
+                      <h3 class="product-card__title">Лучший день</h3>
+                      <p class="product-card__price">167.000 ₽</p>
+                      <button class="product-card__btn cart-addBtn">
+                        В корзину
+                      </button>
+                    </div>
+                  </article>
+                  <article class="products-block__card product-card sale-label">
+                    <div class="product-card__wrapper">
+                      <div class="product-card__img">
+                        <a href="#" class="product-card__link"></a>
+                        <img
+                          src="../src/images/CatalogPage/catalog-products/catalog-product-9.jpg"
+                          alt="product-img-9"
+                          class="product-card__picture"
+                        />
+                      </div>
+                      <h3 class="product-card__title">Лучший день</h3>
+                      <p class="product-card__price">167.000 ₽</p>
+                      <button class="product-card__btn cart-addBtn">
+                        В корзину
+                      </button>
+                    </div>
+                  </article>
+                  <article class="products-block__card product-card">
+                    <div class="product-card__wrapper">
+                      <div class="product-card__img">
+                        <a href="#" class="product-card__link"></a>
+                        <img
+                          src="../src/images/CatalogPage/catalog-products/catalog-product-10.jpg"
+                          alt="product-img-10"
+                          class="product-card__picture"
+                        />
+                      </div>
+                      <h3 class="product-card__title">Лучший день</h3>
+                      <p class="product-card__price">167.000 ₽</p>
+                      <button class="product-card__btn cart-addBtn">
+                        В корзину
+                      </button>
+                    </div>
+                  </article>
+                  <article class="products-block__card product-card sale-label">
+                    <div class="product-card__wrapper">
+                      <div class="product-card__img">
+                        <a href="#" class="product-card__link"></a>
+                        <img
+                          src="../src/images/CatalogPage/catalog-products/catalog-product-1.jpg"
+                          alt="product-img-1"
+                          class="product-card__picture"
+                        />
+                      </div>
+                      <h3 class="product-card__title">Лучший день</h3>
+                      <p class="product-card__price">167.000 ₽</p>
+                      <button class="product-card__btn cart-addBtn">
+                        В корзину
+                      </button>
+                    </div>
+                  </article>
+                  <article class="products-block__card product-card">
+                    <div class="product-card__wrapper">
+                      <div class="product-card__img">
+                        <a href="#" class="product-card__link"></a>
+                        <img
+                          src="../src/images/CatalogPage/catalog-products/catalog-product-2.jpg"
+                          alt="product-img-2"
+                          class="product-card__picture"
+                        />
+                      </div>
+                      <h3 class="product-card__title">Лучший день</h3>
+                      <p class="product-card__price">167.000 ₽</p>
+                      <button class="product-card__btn cart-addBtn">
+                        В корзину
+                      </button>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
       <footer class="footer">
         <div class="container">
           <div class="footer-content">
@@ -420,5 +860,6 @@
         </div>
       </footer>
     </div>
+    <script src="/src/js/range.js"></script>
   </body>
 </html>
