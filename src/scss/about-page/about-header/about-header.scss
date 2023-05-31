@@ -1,0 +1,135 @@
+@import "../../variables.scss";
+@import "../../common.scss";
+
+.body {
+  &--about-blur {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $golden-color;
+      width: 274px;
+      height: 220px;
+      filter: blur(125px);
+      transform: rotate(-71.86deg);
+      z-index: -1;
+    }
+  }
+}
+
+.header {
+  &--about-bgImg {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1084px;
+      height: 807px;
+      background: url("../../../images/AboutPage/about-header/about-bg1.png")
+        no-repeat;
+      z-index: -1;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: -200px;
+      width: 928px;
+      height: 690px;
+      background: url("../../../images/AboutPage/about-header/about-bg2.png")
+        no-repeat;
+      z-index: -1;
+    }
+    margin-bottom: 100px;
+  }
+}
+
+.about-banner {
+  &__title {
+    font-size: 100px;
+    padding-left: 100px;
+    text-align: start;
+  }
+}
+
+@media screen and (max-width: 1855px) {
+  .header {
+    &--about-bgImg {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1567px) {
+  .header {
+    &--about-bgImg {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1075px) {
+  .about-banner {
+    &__title {
+      text-align: center;
+      padding: 0;
+      @include adaptive-font(100, 40);
+    }
+  }
+
+  .about-content {
+    &__block {
+      margin-left: 0;
+      margin: 0 auto;
+    }
+    &__slogan {
+      @include adaptive-font(60, 40);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    &--about-bgImg {
+      &::before {
+        top: 150px;
+        left: 0;
+        display: block;
+        background: url("../../../images/AboutPage/about-header/about-mobile-bg1.png")
+          no-repeat;
+      }
+      &::after {
+        top: 0;
+        right: -720px;
+        display: block;
+        background: url("../../../images/AboutPage/about-header/about-mobile-bg2.png")
+          no-repeat;
+      }
+    }
+  }
+  .about-content {
+    &__title {
+      margin-top: 50px;
+    }
+    &__list,
+    &__text {
+      margin-left: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .about-banner {
+    &__title {
+      text-align: start;
+    }
+  }
+}
