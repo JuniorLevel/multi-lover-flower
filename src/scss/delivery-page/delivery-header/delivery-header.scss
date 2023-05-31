@@ -1,0 +1,220 @@
+@import "../../variables.scss";
+@import "../../common.scss";
+
+.body {
+  &--blur {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      width: 504px;
+      height: 625px;
+      background: #6b535f;
+      filter: blur(125px);
+      transform: rotate(32.83deg);
+      z-index: -1;
+    }
+  }
+}
+
+.header {
+  &--delivery {
+    margin-bottom: 100px;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 274px;
+      height: 220px;
+      background: #6b535f;
+      filter: blur(125px);
+      transform: rotate(32.83deg);
+      z-index: -1;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      top: 130px;
+      right: -345px;
+      width: 890px;
+      height: 635px;
+      background-image: url("../../../images/DeliveryPage/delivery-header/delivery-bg.png");
+      background-repeat: no-repeat;
+    }
+  }
+}
+.header--delivery {
+}
+.container {
+}
+.header-top {
+  &--bg {
+    background-color: black;
+    margin-bottom: 35px;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1140px;
+    width: 100%;
+  }
+  &__logo {
+  }
+
+  &__logo-img {
+  }
+
+  &__menu {
+  }
+
+  &__header-panel {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+}
+.header-top--bg {
+}
+.logo {
+}
+.header-menu {
+  &__item {
+  }
+
+  &__item-link {
+  }
+
+  &__item-link--search {
+  }
+}
+.header-panel {
+}
+.panel {
+  &__tel {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 4px;
+      left: -25px;
+      width: 18px;
+      height: 18px;
+      background-image: url("../../../images/icons/phone.svg");
+      background-repeat: no-repeat;
+    }
+    font-size: 16px;
+  }
+
+  &__cart {
+  }
+}
+.tel {
+}
+.cart-btn {
+  &__count {
+  }
+}
+.hamburger-menu {
+  &__img {
+  }
+
+  &__logo-text {
+  }
+
+  &__cart-btn {
+  }
+}
+.delivery-banner {
+  &__title {
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 121px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    text-align: start;
+  }
+
+  &__title-span {
+    display: block;
+    margin-left: 95px;
+  }
+
+  &__info {
+    max-width: 570px;
+    margin-left: 95px;
+  }
+
+  &__info-appeal {
+    position: relative;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $pink-color;
+    margin-bottom: 10px;
+    display: inline-block;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: -30px;
+      width: 25px;
+      height: 121px;
+      background: url("../../../images/icons/exclamation.svg") no-repeat;
+    }
+  }
+
+  &__info-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $white-color;
+  }
+
+  &__info-span {
+    color: $btn-normal-color;
+  }
+}
+
+@media screen and (max-width: 1075px) {
+  .header {
+    &--delivery {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .body {
+    &--blur {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    &--delivery {
+      &::after {
+        display: block;
+        top: 140px;
+        right: 0;
+        width: 115px;
+        height: 150px;
+        background: url("../../../images/DeliveryPage/delivery-header/delivery-mobile-bg.png")
+          no-repeat;
+      }
+    }
+  }
+}

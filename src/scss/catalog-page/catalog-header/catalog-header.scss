@@ -1,5 +1,35 @@
 @import "../../variables.scss";
 
+.body {
+  &--catalog-blur {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 250px;
+      left: 0;
+      width: 504px;
+      height: 560px;
+      background: #7d2253;
+      filter: blur(125px);
+      transform: rotate(32.83deg);
+      z-index: -1;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 392px;
+      height: 280px;
+      background: $btn-hover-color;
+      filter: blur(125px);
+      transform: rotate(32.83deg);
+      z-index: -1;
+    }
+  }
+}
+
 .breadcrumbs-list {
   &__item {
     display: inline;
@@ -81,7 +111,36 @@
     text-align: center;
     margin-bottom: 60px;
   }
-  &__tags {
+
+  &__list-btn {
+    margin: 0 auto;
+    max-width: 200px;
+    width: 100%;
+  }
+
+  &__btn {
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: $pink-color;
+    &:hover {
+      cursor: pointer;
+      transition: $transition;
+      text-decoration: underline;
+    }
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      top: 30%;
+      right: 5px;
+      border: 6px solid transparent;
+      border-top: 8px solid $pink-color;
+      width: 12px;
+      height: 12px;
+    }
   }
 }
 
@@ -130,4 +189,92 @@
   backdrop-filter: $BlurBackdrop-filter;
   min-height: 400px;
   max-height: 818px;
+}
+
+@media screen and (max-width: 1125px) {
+  .panel {
+    display: none;
+  }
+  .header-banner {
+    &__cart-btn {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1075px) {
+  .header-banner {
+    margin-top: 50px;
+  }
+
+  .catalog-banner {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 845px) {
+  .catalog-banner {
+    &__title {
+      @include adaptive-font(100, 40);
+    }
+    &__title-span {
+      padding-left: 150px;
+    }
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .catalog-banner {
+    background-color: transparent;
+    backdrop-filter: none;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  .catalog-banner {
+    &__title {
+      line-height: 80px;
+    }
+    &__title-span {
+      padding-left: 80px;
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .body {
+    &--catalog-blur {
+      &::after {
+        display: none;
+      }
+    }
+  }
+  .catalog-products {
+    &::before {
+      display: none;
+    }
+  }
+  .catalog-tags {
+    display: none;
+  }
+  .catalog-banner {
+    min-height: 0;
+    &__list-btn {
+      display: block;
+    }
+  }
+  .filter-block {
+    display: none;
+  }
+  .block-tags {
+    &__list,
+    &__select {
+      display: none;
+    }
+  }
+  .products-block {
+    &__cards {
+      justify-content: center;
+    }
+  }
 }

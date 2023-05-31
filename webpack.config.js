@@ -36,6 +36,10 @@ module.exports = {
       template: path.resolve(__dirname, "src", "catalog.html"),
       filename: "catalog.html",
     }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "src", "delivery.html"),
+      filename: "delivery.html",
+    }),
     // new CopyPlugin({
     //   patterns: [{ from: 'static', to: './' }],
     // }),

@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="./index.scss" />
     <title>Каталог</title>
   </head>
-  <body>
+  <body class="body--catalog-blur">
     <div class="wrapper">
       <header class="header header--catalogBgImages">
         <div class="container">
@@ -158,6 +158,16 @@
               </button>
             </div>
           </div>
+          <div class="hamburger-menu">
+            <div class="hamburger-menu__img">
+              <img src="/src/images/icons/hamburger.svg" alt="hamburger-svg" />
+            </div>
+            <p class="hamburger-menu__logo-text">Lover<br />Flower</p>
+            <button hidden class="hamburger-menu__cart-btn cart-btn">
+              <span data-cart-count="0" class="cart-btn__count">5</span>
+            </button>
+          </div>
+          <div hidden class="menu-hamburger"></div>
           <div class="breadcrumbs">
             <ul class="breadcrumbs-list">
               <li class="breadcrumbs-list__item">
@@ -182,6 +192,17 @@
             <p class="catalog-banner__text">
               В нашем магазине самый большой выбор букетов для любых событий:
             </p>
+            <ul hidden class="catalog-banner__list-btn">
+              <li class="catalog-banner__btn catalog-banner__btn-filterBlock">
+                фильтр товаров
+              </li>
+              <li class="catalog-banner__btn catalog-banner__btn-select">
+                сортировка товаров
+              </li>
+              <li class="catalog-banner__btn catalog-banner__btn-categories">
+                Категории
+              </li>
+            </ul>
             <div class="catalog-banner__tags catalog-tags">
               <ul class="catalog-tags__list">
                 <li class="catalog-tags__list-item">Букеты из гипсофил</li>
@@ -208,7 +229,7 @@
           </div>
         </div>
       </header>
-      <main class="main">
+      <main class="main main--catalog-blur">
         <section class="catalog-products">
           <div class="container">
             <div class="catalog-products__inner">

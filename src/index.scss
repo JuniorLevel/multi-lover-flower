@@ -4,9 +4,11 @@
 @import "scss/fonts.scss";
 @import "scss/home-page/home-page.scss";
 @import "scss/catalog-page/catalog-page.scss";
+@import "scss/delivery-page/delivery-page.scss";
 
 html {
   min-height: 100%;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 

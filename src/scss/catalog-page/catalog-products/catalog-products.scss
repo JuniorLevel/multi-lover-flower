@@ -1,6 +1,37 @@
 @import "../../variables.scss";
 
+.main {
+  &--catalog-blur {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 211px;
+      bottom: -115px;
+      left: 0;
+      background: $btn-normal-color;
+      filter: blur(125px);
+      transform: rotate(21.1deg);
+      z-index: -1;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 879px;
+      height: 211px;
+      bottom: -250px;
+      right: 400px;
+      background: #43ffd2;
+      filter: blur(125px);
+      transform: rotate(21.1deg);
+      z-index: -1;
+    }
+  }
+}
+
 .catalog-products {
+  position: relative;
   margin: 30px 0;
   &__inner {
     display: flex;
@@ -9,6 +40,31 @@
   &__filter-block {
     max-width: 300px;
     width: 100%;
+  }
+  padding-bottom: 200px;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 354.93px;
+    height: 364.22px;
+    top: 0;
+    right: 0;
+    background: $btn-hover-color;
+    filter: blur(125px);
+    transform: rotate(32.83deg);
+    z-index: -1;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 354.93px;
+    height: 364.22px;
+    bottom: -250px;
+    right: 0;
+    background: $btn-hover-color;
+    filter: blur(125px);
+    transform: rotate(32.83deg);
+    z-index: -1;
   }
 }
 
@@ -127,6 +183,7 @@
 }
 
 .filter-block {
+  padding: 10px 15px;
   max-width: 255px;
 
   &__title {
@@ -210,5 +267,22 @@
     background-color: transparent;
     color: $white-color;
     margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .filter-block {
+    display: none;
+  }
+  .block-tags {
+    &__list,
+    &__select {
+      display: none;
+    }
+  }
+  .products-block {
+    &__cards {
+      justify-content: center;
+    }
   }
 }
